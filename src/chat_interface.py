@@ -1,24 +1,24 @@
-# streamlit.py
+# chat_interface.py
 import streamlit as st
-from ollama import get_response_from_llama  # استيراد الدالة من ollama.py
+from ollama import get_response_from_llama  # Import the function from ollama.py
+
 
 def streamlit_app():
-    # عنوان الصفحة
-    st.title("Chat with Llama")
+    """
+    Streamlit application to interact with Llama.
+    """
+    st.title("Chat with Llama")  # Page title
 
-    # نص التفاعل مع المستخدم
+    # User interaction input
     user_input = st.text_input("Enter your message:")
 
     if user_input:
-        # الحصول على الرد من الخادم
+        # Get response from server
         response = get_response_from_llama(user_input)
-        
-        # عرض الاستجابة
-        #st.write("Response from Llama:", response)
 
-        # استخراج الرد النصي من الاستجابة JSON
+        # Extract textual content from the JSON response
         if isinstance(response, dict) and 'choices' in response:
             content = response['choices'][0]['message']['content']
-            st.write("Response from Llama:", content)  # عرض النص فقط من الرد
+            st.write("Response from Llama:", content)  # Display the text from the response
         else:
-            st.write("Error in response:", response)  # إذا كانت الاستجابة غير صحيحة
+            st.write("Error in response:", response)  # Display an error message for invalid responses
