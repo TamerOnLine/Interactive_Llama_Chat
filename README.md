@@ -58,7 +58,7 @@ Ensure you have the following installed on your system:
 
 4. Run the application:
    ```bash
-   python src/main.py
+   streamlit run main.py
    ```
 
 ---
@@ -72,6 +72,25 @@ Ensure you have the following installed on your system:
 
 ## Configuration
 - **Llama Server URL**: The URL is defined in `src/ollama.py` under the variable `url`. Update it to point to your Llama server if needed.
+
+---
+
+## Manual Setup (Without Docker)
+If you want to run the application without Docker:
+
+1. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Ensure the Ollama server is running at `http://localhost:11434/v1/chat/completions`.
+
+3. Start the application:
+   ```bash
+   streamlit run main.py
+   ```
+
+4. Open the browser at `http://localhost:8501` and test the application.
 
 ---
 
@@ -90,10 +109,10 @@ Contributions are welcome! Please follow these steps:
 ---
 
 ## License
-This project is licensed under the [MIT License](https://github.com/TamerOnLine/Interactive_Llama_Chat/blob/main/LICENSE
-).
+This project is licensed under the [MIT License](https://github.com/TamerOnLine/Interactive_Llama_Chat/blob/main/LICENSE).
 
 ---
 
 ## Acknowledgments
 Special thanks to the creators of Streamlit and the Llama model for making this project possible.
+
