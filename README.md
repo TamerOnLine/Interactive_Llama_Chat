@@ -1,118 +1,102 @@
 # Interactive Llama Chat
 
-Interactive Llama Chat is a Python-based application that allows users to interact with the Llama model through a Streamlit interface. The project provides an easy-to-use platform for sending messages to the Llama server and receiving responses in real time.
+Interactive Llama Chat is a Python-based application that facilitates communication with the Llama model through a streamlined Streamlit interface. It enables users to send messages to the Llama server and receive responses in real time via REST APIs.
 
 ---
 
 ## Features
-- **Streamlit Interface**: A user-friendly web interface for communication.
-- **Backend Integration**: Communicates with the Llama server using REST APIs.
-- **Extensibility**: Modular code structure for easy customization and extension.
+
+- **Intuitive Interface**: Built with Streamlit for easy interaction.
+- **Seamless Integration**: Communicates with Llama server using RESTful APIs.
+- **Modular Design**: Structured for straightforward customization and scalability.
 
 ---
 
-## Project Structure
-```plaintext
-tameronline-interactive_llama_chat/
-├── requirements.txt
-└── src/
-    ├── chat_interface.py
-    ├── main.py
-    └── ollama.py
-```
+## Installation Guide
 
-### Files Overview
-- **`requirements.txt`**: Lists the dependencies required for the project.
-- **`src/chat_interface.py`**: Contains the main Streamlit application logic.
-- **`src/main.py`**: The entry point for the application.
-- **`src/ollama.py`**: Handles communication with the Llama server.
+### Requirements
 
----
+Ensure you have the following installed:
 
-## Installation
-
-### Prerequisites
-Ensure you have the following installed on your system:
 - Python 3.8 or later
-- pip (Python package manager)
-- [Download Ollama](https://www.ollama.com/download)
-- [Download Llama3.2](https://www.ollama.com/library/llama3.2)
+- pip
+- [Ollama](https://www.ollama.com/download)
+- [Llama3.2 Model](https://www.ollama.com/library/llama3.2)
 
-### Steps
+### Setup Steps
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/TamerOnLine/interactive_llama_chat.git
    cd interactive_llama_chat
    ```
-
-2. Create a virtual environment and activate it:
+2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+   source venv/bin/activate  # For Windows: venv\Scripts\activate
    ```
-
 3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-
-4. Run the application:
+4. Start the Ollama server:
+   - Open your terminal.
+   - Navigate to the folder where Ollama is installed.
+   - Run the following command:
+     ```bash
+     ollama start
+     ```
+5. Launch the application:
    ```bash
    streamlit run main.py
    ```
 
 ---
 
-## Usage
-1. Open the application in your web browser (default URL: `http://localhost:8501`).
-2. Enter your message in the text input field and submit.
-3. View the response from the Llama server in real time.
+## Usage Instructions
+
+1. Open the application in your browser (default URL: `http://localhost:8501`).
+2. Input your message and submit it.
+3. View the real-time response from the Llama model.
+
+---
+
+## Project Structure
+
+```plaintext
+project-directory/
+├── requirements.txt
+└── src/
+    ├── chat_interface.py  # Streamlit app logic
+    ├── main.py            # Application entry point
+    └── ollama.py          # Handles Llama server communication
+```
 
 ---
 
 ## Configuration
-- **Llama Server URL**: The URL is defined in `src/ollama.py` under the variable `url`. Update it to point to your Llama server if needed.
+
+- Modify the Llama server URL in `src/ollama.py` if needed.
 
 ---
 
-## Manual Setup (Without Docker)
-If you want to run the application without Docker:
+## Contributions
 
-1. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+We welcome contributions to enhance the project:
 
-2. Ensure the Ollama server is running at `http://localhost:11434/v1/chat/completions`.
-
-3. Start the application:
-   ```bash
-   streamlit run main.py
-   ```
-
-4. Open the browser at `http://localhost:8501` and test the application.
-
----
-
-## Dependencies
-- **Streamlit**: For building the web interface.
-- **Requests**: For making HTTP requests to the Llama server.
-
----
-
-## Contribution
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a feature branch.
-3. Submit a pull request.
+- Fork the repository.
+- Create a feature branch.
+- Submit a pull request.
 
 ---
 
 ## License
-This project is licensed under the [MIT License](https://github.com/TamerOnLine/Interactive_Llama_Chat/blob/main/LICENSE).
+
+This project is distributed under the [MIT License](https://github.com/TamerOnLine/Interactive_Llama_Chat/blob/main/LICENSE).
 
 ---
 
-## Acknowledgments
-Special thanks to the creators of Streamlit and the Llama model for making this project possible.
+## Credits
+
+Thanks to the teams behind Streamlit and the Llama model for their tools and resources.
 
