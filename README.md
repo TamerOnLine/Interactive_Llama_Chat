@@ -100,3 +100,26 @@ This project is distributed under the [MIT License](https://github.com/TamerOnLi
 
 Thanks to the teams behind Streamlit and the Llama model for their tools and resources.
 
+## Future Enhancements
+
+We are considering the following enhancements to improve the project:
+
+1. **Comprehensive Testing**:
+   - Add tests to cover edge cases such as invalid input and server unavailability.
+   - Ensure the project is stable under different scenarios.
+
+2. **Settings Management**:
+   - Use `.env` files for managing configuration, such as server URL, model name, etc., for better flexibility.
+
+3. **Improved Documentation**:
+   - Add detailed comments to the code for better readability and understanding.
+   - Enhance README.md with example use cases and troubleshooting tips.
+
+4. **Interface Customization**:
+   - Add options in the Streamlit interface to customize model settings (e.g., model name, number of responses).
+   - Allow users to upload configurations directly.
+
+5. **Performance Optimization**:
+   - Explore using `asyncio` or other libraries to handle high traffic efficiently.
+
+
